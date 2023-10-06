@@ -1,6 +1,6 @@
 package src.Multimedia;
 
-public class Video extends ElementoMultimediale {
+public class Video extends ElementoMultimediale implements Riproducibile {
 
     protected int volume = ElementoMultimediale.volume;
 
@@ -11,4 +11,8 @@ public class Video extends ElementoMultimediale {
     }
 
 
+    @Override
+    public void riproduci() {
+        System.out.println("Il video con titolo" + this.title + "é in riproduzione");
+    }
 }

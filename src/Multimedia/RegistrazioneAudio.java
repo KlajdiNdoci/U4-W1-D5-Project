@@ -1,6 +1,6 @@
 package src.Multimedia;
 
-public class RegistrazioneAudio extends ElementoMultimediale {
+public class RegistrazioneAudio extends ElementoMultimediale implements Riproducibile {
     protected int volume = ElementoMultimediale.volume;
 
 
@@ -9,5 +9,9 @@ public class RegistrazioneAudio extends ElementoMultimediale {
     }
 
 
+    @Override
+    public void riproduci() {
+        System.out.println("Il brano con titolo" + this.title + "é in riproduzione");
+    }
 }
 
