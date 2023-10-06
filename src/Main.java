@@ -5,8 +5,7 @@ import src.LettoreMultimediale.Video;
 
 import java.util.Scanner;
 
-import static src.LettoreMultimediale.ElementoMultimediale.abbassaVolume;
-import static src.LettoreMultimediale.ElementoMultimediale.alzaVolume;
+import static src.LettoreMultimediale.ElementoMultimediale.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,10 +17,12 @@ public class Main {
 
 
         abbassaVolume(3);
+        abbassaLuminositá(3);
         System.out.println(reg1);
 
 
         System.out.println(vid1);
+        alzaLuminositá(5);
         alzaVolume(2);
         System.out.println(reg1);
 

@@ -22,10 +22,29 @@ public abstract class ElementoMultimediale {
 
     public static void alzaVolume(int vol) {
         int nuovoVolume = volume + vol;
-        if (nuovoVolume >= 0) {
+        if (nuovoVolume <= 10) {
             setVolume(nuovoVolume);
         } else {
-            System.out.println("Il volume non può essere inferiore a 0.");
+            System.out.println("Il volume non può essere maggiore di 10.");
+        }
+    }
+
+    public static void abbassaLuminositá(int lum) {
+        int nuovoaLuminositá = luminositá - lum;
+        if (nuovoaLuminositá >= 1) {
+            setLuminositá(nuovoaLuminositá);
+        } else {
+            System.out.println("La luminositá non può essere inferiore a 1.");
+        }
+    }
+
+
+    public static void alzaLuminositá(int lum) {
+        int nuovoaLuminositá = luminositá + lum;
+        if (nuovoaLuminositá <= 10) {
+            setLuminositá(nuovoaLuminositá);
+        } else {
+            System.out.println("La luminositá non può essere superiore a 10.");
         }
     }
 
