@@ -7,6 +7,8 @@ import src.LettoreMultimediale.Video;
 
 import java.util.Scanner;
 
+import static src.LettoreMultimediale.ElementoMultimediale.*;
+
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -57,13 +59,102 @@ public class Main {
             }
 
             if (fileDaEseguire >= 1 && fileDaEseguire <= 5) {
-
                 if (elementiMultimediali[fileDaEseguire - 1] instanceof RegistrazioneAudio) {
+
+                    System.out.println("Vuoi aumentare o diminuire il volume? Y/N");
+                    String yesOrNo = input.nextLine().toUpperCase();
+                    if (yesOrNo.equals("Y")) {
+                        System.out.println("Scrivi UP se vuoi aumentare il volume, scrivi DOWN se vuoi diminuire il volume: ");
+                        String selection = input.nextLine().toUpperCase();
+                        int n = 0;
+                        if (selection.equals("UP")) {
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                            System.out.println("Di quanto vuoi aumentare il volume?");
+                            n = Integer.parseInt(input.nextLine());
+                            alzaVolume(n);
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                        } else if (selection.equals("DOWN")) {
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                            System.out.println("Di quanto vuoi diminuire il volume?");
+                            n = Integer.parseInt(input.nextLine());
+                            abbassaVolume(n);
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                        } else {
+                            System.out.println("Errore nell'inserimento");
+                        }
+                    }
                     ((RegistrazioneAudio) elementiMultimediali[fileDaEseguire - 1]).riproduci();
+
                 } else if (elementiMultimediali[fileDaEseguire - 1] instanceof Video) {
+                    System.out.println("Vuoi aumentare o diminuire il volume? Y/N");
+                    String yesOrNoVol = input.nextLine().toUpperCase();
+                    if (yesOrNoVol.equals("Y")) {
+                        System.out.println("Scrivi UP se vuoi aumentare il volume, scrivi DOWN se vuoi diminuire il volume: ");
+                        String selection = input.nextLine().toUpperCase();
+                        int n = 0;
+                        if (selection.equals("UP")) {
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                            System.out.println("Di quanto vuoi aumentare il volume?");
+                            n = Integer.parseInt(input.nextLine());
+                            alzaVolume(n);
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                        } else if (selection.equals("DOWN")) {
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                            System.out.println("Di quanto vuoi diminuire il volume?");
+                            n = Integer.parseInt(input.nextLine());
+                            abbassaVolume(n);
+                            System.out.println("Il volume è impostato a: " + getVolume());
+                        } else {
+                            System.out.println("Errore nell'inserimento");
+                        }
+                    }
+                    System.out.println("Vuoi aumentare o diminuire la luminositá? Y/N");
+                    String yesOrNoLum = input.nextLine().toUpperCase();
+                    if (yesOrNoLum.equals("Y")) {
+                        System.out.println("Scrivi UP se vuoi aumentare la luminositá, scrivi DOWN se vuoi diminuire la luminositá: ");
+                        String selection = input.nextLine().toUpperCase();
+                        int n = 0;
+                        if (selection.equals("UP")) {
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                            System.out.println("Di quanto vuoi aumentare la luminositá?");
+                            n = Integer.parseInt(input.nextLine());
+                            alzaLuminositá(n);
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                        } else if (selection.equals("DOWN")) {
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                            System.out.println("Di quanto vuoi diminuire la luminositá?");
+                            n = Integer.parseInt(input.nextLine());
+                            abbassaLuminositá(n);
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                        } else {
+                            System.out.println("Errore nell'inserimento");
+                        }
+                    }
+
                     ((Video) elementiMultimediali[fileDaEseguire - 1]).riproduci();
-                    System.out.println("");
                 } else if (elementiMultimediali[fileDaEseguire - 1] instanceof Immagine) {
+                    System.out.println("Vuoi aumentare o diminuire la luminositá? Y/N");
+                    String yesOrNoLum = input.nextLine().toUpperCase();
+                    if (yesOrNoLum.equals("Y")) {
+                        System.out.println("Scrivi UP se vuoi aumentare la luminositá, scrivi DOWN se vuoi diminuire la luminositá: ");
+                        String selection = input.nextLine().toUpperCase();
+                        int n = 0;
+                        if (selection.equals("UP")) {
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                            System.out.println("Di quanto vuoi aumentare la luminositá?");
+                            n = Integer.parseInt(input.nextLine());
+                            alzaLuminositá(n);
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                        } else if (selection.equals("DOWN")) {
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                            System.out.println("Di quanto vuoi diminuire la luminositá?");
+                            n = Integer.parseInt(input.nextLine());
+                            abbassaLuminositá(n);
+                            System.out.println("La luminositá è impostata a: " + getLuminositá());
+                        } else {
+                            System.out.println("Errore nell'inserimento");
+                        }
+                    }
                     ((Immagine) elementiMultimediali[fileDaEseguire - 1]).show();
                 }
             } else {
