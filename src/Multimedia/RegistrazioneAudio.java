@@ -3,6 +3,8 @@ package src.Multimedia;
 public class RegistrazioneAudio extends ElementoMultimediale implements Riproducibile {
     protected int volume = ElementoMultimediale.volume;
 
+    protected int durata;
+
 
     public RegistrazioneAudio(String title) {
         super(title);

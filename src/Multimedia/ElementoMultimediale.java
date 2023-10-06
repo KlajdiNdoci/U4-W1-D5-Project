@@ -8,6 +8,7 @@ public abstract class ElementoMultimediale {
     public ElementoMultimediale(String title) {
         this.title = title;
     }
+    
 
     public static void setVolume(int newVolume) {
         if (newVolume >= 1 && newVolume <= 10) {

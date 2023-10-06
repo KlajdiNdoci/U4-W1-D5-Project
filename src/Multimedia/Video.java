@@ -4,6 +4,8 @@ public class Video extends ElementoMultimediale implements Riproducibile {
 
     protected int volume = ElementoMultimediale.volume;
 
+    protected int durata;
+
     protected int luminositá = ElementoMultimediale.luminositá;
 
     public Video(String title) {
