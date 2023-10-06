@@ -22,11 +22,14 @@ public class Main {
         abbassaLuminositá(3);
         System.out.println(reg1);
         reg1.riproduci();
+        vid1.riproduci();
 
 
         System.out.println(vid1);
         alzaLuminositá(5);
         alzaVolume(2);
+        vid1.riproduci();
+
         System.out.println(reg1);
 
 
