@@ -15,10 +15,13 @@ public class Main {
         RegistrazioneAudio reg1 = new RegistrazioneAudio("registrazione 1");
         Video vid1 = new Video("video 1");
 
+        reg1.riproduci();
+
 
         abbassaVolume(3);
         abbassaLuminositá(3);
         System.out.println(reg1);
+        reg1.riproduci();
 
 
         System.out.println(vid1);

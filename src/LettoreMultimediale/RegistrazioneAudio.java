@@ -15,7 +15,14 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
 
     @Override
     public void riproduci() {
-        System.out.println("Il brano con titolo" + this.title + "é in riproduzione");
+        for (int i = 0; i < this.durata; i++) {
+            StringBuilder audioRepresentation = new StringBuilder();
+            for (int j = 0; j < volume; j++) {
+                audioRepresentation.append("!");
+            }
+
+            System.out.println(this.title + " " + audioRepresentation);
+        }
     }
 
     @Override

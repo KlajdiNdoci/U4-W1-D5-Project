@@ -48,12 +48,20 @@ public abstract class ElementoMultimediale {
         }
     }
 
+    public static int getVolume() {
+        return volume;
+    }
+
     public static void setVolume(int newVolume) {
         if (newVolume >= 0 && newVolume <= 10) {
             volume = newVolume;
         } else {
             System.out.println("Il volume deve essere compreso tra 0 e 10.");
         }
+    }
+
+    public static int getLuminositá() {
+        return luminositá;
     }
 
     public static void setLuminositá(int newLuminositá) {

@@ -8,7 +8,7 @@ public class Video extends ElementoMultimediale implements Riproducibile {
 
     public Video(String title) {
         super(title);
-        this.durata = 10;
+        this.durata = 5;
     }
 
 
