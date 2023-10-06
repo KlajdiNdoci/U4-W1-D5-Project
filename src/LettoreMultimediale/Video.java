@@ -15,15 +15,15 @@ public class Video extends ElementoMultimediale implements Riproducibile {
     @Override
     public void riproduci() {
         for (int i = 0; i < this.durata; i++) {
-            StringBuilder audioRepresentation = new StringBuilder();
+            StringBuilder videoRepresentation = new StringBuilder();
             for (int j = 0; j < volume; j++) {
-                audioRepresentation.append("!");
+                videoRepresentation.append("!");
             }
             for (int k = 0; k < luminositá; k++) {
-                audioRepresentation.append("*");
+                videoRepresentation.append("*");
             }
 
-            System.out.println(this.title + " " + audioRepresentation);
+            System.out.println(this.title + " " + videoRepresentation);
         }
     }
 

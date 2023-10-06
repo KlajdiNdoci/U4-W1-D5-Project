@@ -1,5 +1,6 @@
 package src;
 
+import src.LettoreMultimediale.Immagine;
 import src.LettoreMultimediale.RegistrazioneAudio;
 import src.LettoreMultimediale.Video;
 
@@ -14,6 +15,7 @@ public class Main {
 
         RegistrazioneAudio reg1 = new RegistrazioneAudio("registrazione 1");
         Video vid1 = new Video("video 1");
+        Immagine img1 = new Immagine("image 1");
 
         reg1.riproduci();
 
@@ -21,6 +23,7 @@ public class Main {
         abbassaVolume(3);
         abbassaLuminositá(3);
         System.out.println(reg1);
+        System.out.println(img1);
         reg1.riproduci();
         vid1.riproduci();
 
@@ -29,6 +32,7 @@ public class Main {
         alzaLuminositá(5);
         alzaVolume(2);
         vid1.riproduci();
+        img1.show();
 
         System.out.println(reg1);
 
