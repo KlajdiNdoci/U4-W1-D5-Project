@@ -44,6 +44,34 @@ public class Main {
             System.out.println("Elemento " + (i + 1) + ": " + elementiMultimediali[i].getTitle());
         }
 
+        System.out.println("immetti un numero da 1 a 5 per eseguire uno degli oggetti che hai inserito, o inserisci 0 per uscire");
+
+        int fileDaEseguire;
+
+        do {
+            System.out.print("Inserisci il numero del file da eseguire (0 per uscire, 1-5 per eseguire un elemento multimediale): ");
+            fileDaEseguire = Integer.parseInt(input.nextLine());
+
+            if (fileDaEseguire == 0) {
+                break;
+            }
+
+            if (fileDaEseguire >= 1 && fileDaEseguire <= 5) {
+
+                if (elementiMultimediali[fileDaEseguire - 1] instanceof RegistrazioneAudio) {
+                    ((RegistrazioneAudio) elementiMultimediali[fileDaEseguire - 1]).riproduci();
+                } else if (elementiMultimediali[fileDaEseguire - 1] instanceof Video) {
+                    ((Video) elementiMultimediali[fileDaEseguire - 1]).riproduci();
+                    System.out.println("");
+                } else if (elementiMultimediali[fileDaEseguire - 1] instanceof Immagine) {
+                    ((Immagine) elementiMultimediali[fileDaEseguire - 1]).show();
+                }
+            } else {
+                System.out.println("Inserisci un numero valido (0 per uscire, 1-5 per eseguire un elemento multimediale).");
+            }
+
+        } while (true);
+
 
         input.close();
     }
