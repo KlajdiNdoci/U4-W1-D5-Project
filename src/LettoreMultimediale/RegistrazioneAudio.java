@@ -7,11 +7,6 @@ public class RegistrazioneAudio extends ElementoMultimediale implements Riproduc
         super(title);
     }
 
-    public RegistrazioneAudio(String title, int durata) {
-        super(title);
-        this.durata = durata;
-    }
-
 
     @Override
     public void riproduci() {

@@ -1,6 +1,6 @@
 package src.LettoreMultimediale;
 
-public abstract class ElementoMultimediale {
+public class ElementoMultimediale {
     protected static int volume;
     protected static int luminositá;
     protected String title;
@@ -38,7 +38,6 @@ public abstract class ElementoMultimediale {
         }
     }
 
-
     public static void alzaLuminositá(int lum) {
         int nuovoaLuminositá = luminositá + lum;
         if (nuovoaLuminositá <= 10) {
@@ -70,6 +69,10 @@ public abstract class ElementoMultimediale {
         } else {
             System.out.println("La luminositá deve essere compresa tra 0 e 10.");
         }
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     @Override
